@@ -444,7 +444,42 @@
             </li>
           </ul>
         </div>
+        <div class="ftr-subscr">
+          <p class="ro-mid-ftr">
+            Subscribe
+          </p>
+          <form class="ftr-form" name="issue_report_form" autocomplete="off">
+            <label for="ftr-username"></label>
+            <input class="ftr-input" type="text" name="username" id="ftr-username" placeholder="E-mail" />
+           <button class="form-button" type="submit">Subscribe
+ <!--             <p class="send">Subscribe</p>    -->
+              <svg class="icon-send" width="24" height="24">
+                <use href="./images/icons.svg#icon-icon-send1"></use>
+              </svg>
+            </button>
+          </form>
+          <p class="ro-mid-ftr">
+         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="btn-close" type="button">
+          <svg class="icon-close" width="8" height="8">
+            <use href="./images/icons.svg#icon-icon-close"></use>
+          </svg>
+        </button>
+        <p class="form-ttl">Leave your contacts and we will call you back
+        </p>
+        <form class="modal-form">
+          <input type="text" class="modal-input" name="user-name" placeholder=""/>
+          <input type="tel" class="modal-input" name="user-phone" placeholder=""/>
+          <input type="email" class="modal-input" name="user-email" placeholder=""/>
+          <textarea name="user-comment" class="modal-details" rows="5" placeholder="Text input"></textarea>
+          <button type="submit" class="modal-send">Send</button>
+        </form>
+      </div>
+
+    </div>
   </body>
 </html>
