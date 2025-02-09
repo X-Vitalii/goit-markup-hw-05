@@ -608,18 +608,34 @@ button.form-button {
 }
 
 .form-ttl {
-    color: #2e2f42;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    text-align: center;
+  color: #2e2f42;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: 16px;    
+}
+
+.modal-label {
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 4px;
 }
 
 .modal-input {
   width: 100%;
-  height: 100%;
-  margin-bottom: 18px;
+  height: 40px;
+  margin-bottom: 8px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
@@ -628,14 +644,41 @@ button.form-button {
 
 .modal-details {
   width: 100%;
-  height: 100%;
+  height: 120px;
   margin-bottom: 18px;
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  text-align: left;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  padding-left: 16px;
-  padding-right: 16px;
-}
+  padding: 8px 16px;
+ }
 
+ .modal-details::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+ }
+
+.modal-label-details {
+  display: inline-block;
+  width: 34px;
+  height: 14px;
+  left: 0;
+  top: 0;
+  color: rgba(46, 47, 66, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  text-align: left;
+  margin-bottom: 4px;
+}
 
 
 
