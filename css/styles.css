@@ -629,17 +629,28 @@ button.form-button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   text-align: left;
-  margin-bottom: 4px;
+  margin: 8px 0 4px 0;
+}
+
+.input-icon-placement {
+  position: relative;
 }
 
 .modal-input {
   width: 100%;
   height: 40px;
-  margin-bottom: 8px;
+  /*margin-bottom: 8px;*/
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
   padding-right: 16px;
+}
+
+.modal-input-icons {
+  fill: #111111;
+  position: absolute;
+  top: 8px;
+  left: 16px;
 }
 
 .modal-details {
