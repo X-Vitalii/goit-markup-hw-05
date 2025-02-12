@@ -568,6 +568,15 @@ button.form-button {
   top: 0;
   position: fixed;
   background-color: rgba(46, 47, 66, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal {
@@ -578,8 +587,6 @@ button.form-button {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 72px 24px 24px 24px;
-
-
   border-radius: 4px;
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
                   0px 1px 3px 0px rgba(0, 0, 0, 0.12),
@@ -617,6 +624,9 @@ button.form-button {
   margin-bottom: 16px;    
 }
 
+.label-input {
+  padding-bottom: 8px;
+}
 .modal-label {
   display: inline-block;
   width: 34px;
@@ -629,7 +639,8 @@ button.form-button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   text-align: left;
-  margin: 8px 0 4px 0;
+  padding-bottom: 4px;
+  /*margin: 8px 0 4px 0;*/
 }
 
 .input-icon-placement {
@@ -639,24 +650,33 @@ button.form-button {
 .modal-input {
   width: 100%;
   height: 40px;
-  /*margin-bottom: 8px;*/
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding-left: 38px;
   padding-right: 16px;
+  outline: transparent;
+}
+
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
+.modal-input:focus + .modal-input-icons {
+  fill: #4d5ae5;
 }
 
 .modal-input-icons {
   fill: #111111;
   position: absolute;
-  top: 8px;
+  /*top: 8px;*/
   left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .modal-details {
   width: 100%;
   height: 120px;
-  margin-bottom: 18px;
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
@@ -668,6 +688,12 @@ button.form-button {
   padding: 8px 16px;
  }
 
+ /*
+ .modal-details:focus {
+  fill: #4d5ae5;
+ }
+*/
+
  .modal-details::placeholder {
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
@@ -676,6 +702,84 @@ button.form-button {
   letter-spacing: 0.04em;
  }
 
+.modal-policy-checkbox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0 16px 0;
+}
+
+.modal-check-policy {
+  
+}
+
+.modal-label-policy {
+  display: inline-block;
+  width: 100%;
+  height: 16px;
+  color: #8e8f99;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  text-align: left;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  /*margin: 8px 0 4px 0;*/
+}
+
+.policy-link {
+  display: inline-block;
+  height: 16px;
+  text-decoration: underline;
+    font-size: 12px;
+      font-weight: 400;
+      line-height: 1.17;
+      letter-spacing: 0.04em;
+      text-align: left;
+      padding-top: 4px;
+      padding-bottom: 4px;
+      padding-left: 0;
+  
+}
+
+.modal-send {
+  display: block;
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  cursor: pointer;
+  /*margin-left: auto;
+  margin-right: auto;
+  margin-top: 48px;*/
+  padding: 16px 32px;
+  border-radius: 4px;
+  min-width: 169px;
+  
+  height: 56px;
+  padding: 0 120px 0 119px;
+  border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-send-center {
+  background-color: #4d5ae5;
+  min-width: 169px;
+  height: 56px;
+}
+/*
+.modal-send:hover,
+.modal-send:focus {
+  background-color: #404bbf;
+}
+*/
+/*
 .modal-label-details {
   display: inline-block;
   width: 34px;
@@ -690,6 +794,7 @@ button.form-button {
   text-align: left;
   margin-bottom: 4px;
 }
+  */
 
 
 
