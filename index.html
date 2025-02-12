@@ -497,16 +497,25 @@
               </svg>
             </div>
           </div>
-          <div class="label-input">
+          <div class="label-input-comment">
             <label for="user-comment" class="modal-label">Comment</label>
             <textarea name="user-comment" class="modal-details" rows="5" placeholder="Text input" id="user-comment"></textarea>
           </div>
           <div class="modal-policy-checkbox">
-            <input class="modal-check-policy" type="checkbox" name="policy" id="check-policy" value="true" />
-            <label for="check-policy" class="modal-label-policy">I accept the terms and conditions of the</label>
-            <a href="" class="policy-link">Privace Policy</a>
+            <input class="modal-check-policy visually-hidden" 
+            type="checkbox" name="policy" 
+            id="check-policy" 
+            value="true" />
+            <label for="check-policy" class="modal-label-policy">
+              <span class="box-for-checkbox">
+                <svg class="modal-check-mark" width="10" height="8">
+                  <use href="./images/icons.svg#icon-icon-mark"></use>
+                </svg>
+              </span>I accept the terms and conditions of the 
+              <a href="" class="policy-link">Privace Policy</a>
+            </label>
           </div>
-          <button type="submit" class="modal-send"><span class="btn-send-center">Send</span></button>
+          <button type="submit" class="modal-send">Send</button>
         </form>
       </div>
     </div>
