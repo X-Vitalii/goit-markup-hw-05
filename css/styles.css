@@ -571,6 +571,10 @@ button.form-button {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 /*  to activate modal add class below to class backdrop   */
 .is-open {
@@ -591,12 +595,19 @@ button.form-button {
   box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
                   0px 1px 3px 0px rgba(0, 0, 0, 0.12),
                   0px 2px 1px 0px rgba(0, 0, 0, 0.2);
-  background: rgb(252, 252, 252);
+  background: #fcfcfc;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close {
     border: 1px solid rgba(0, 0, 0, 0.1);
     background: #e7e9fc;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: #ffffff;
 }
 
 .btn-close {
@@ -612,6 +623,15 @@ button.form-button {
   top: 24px;
   right: 24px;
   padding: 0;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+              border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-close:hover,
+.btn-close:focus {
+  background-color: #404bbf;
+  border: none;
 }
 
 .form-ttl {
@@ -625,10 +645,10 @@ button.form-button {
 }
 
 .label-input {
-  padding-bottom: 8px;
+  margin-bottom: 8px;
 }
 .modal-label {
-  display: inline-block;
+  display: block;
   width: 34px;
   height: 14px;
   left: 0;
@@ -639,8 +659,7 @@ button.form-button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   text-align: left;
-  padding-bottom: 4px;
-  /*margin: 8px 0 4px 0;*/
+  margin-bottom: 4px;
 }
 
 .input-icon-placement {
@@ -655,8 +674,8 @@ button.form-button {
   padding-left: 38px;
   padding-right: 16px;
   outline: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:focus {
@@ -674,15 +693,20 @@ button.form-button {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms 
+              cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-input-comment {
-  padding-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 .modal-details {
   width: 100%;
   height: 120px;
+  resize: none;
+  outline: transparent;
+  background-color: transparent;
   color: rgba(46, 47, 66, 0.4);
   font-size: 12px;
   font-weight: 400;
@@ -692,13 +716,14 @@ button.form-button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   padding: 8px 16px;
+  transition: border-color 250ms 
+              cubic-bezier(0.4, 0, 0.2, 1);
  }
 
- /*
- .modal-details:focus {
-  fill: #4d5ae5;
+.modal-details:focus {
+  border-color: #4D5AE5;
  }
-*/
+
 
  .modal-details::placeholder {
   color: rgba(46, 47, 66, 0.4);
@@ -710,11 +735,7 @@ button.form-button {
 /* beginning of policy checkbox   */
 
 .modal-policy-checkbox {
-  padding-bottom: 24px;
-  /*display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 8px 0 16px 0;*/
+  margin-bottom: 24px;
 }
 /*  input class   */
 .modal-check-policy {
@@ -735,10 +756,11 @@ button.form-button {
   border-radius: 2px;
   background: #404bbf;
   fill: #f4f4fd;
+  border: none;
 }
 /*    span class   */
 .box-for-checkbox {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   fill: transparent;
@@ -758,6 +780,7 @@ button.form-button {
 }
 /*   Privacy Polisy styling   */
 .policy-link {
+  color: #4d5ae5;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17;
