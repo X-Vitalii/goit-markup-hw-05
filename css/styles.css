@@ -585,7 +585,7 @@ button.form-button {
 
 .modal {
   width: 408px;
-  min-height: 594px;
+  min-height: 584px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -632,6 +632,11 @@ button.form-button {
 .btn-close:focus {
   background-color: #404bbf;
   border: none;
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: #ffffff;
 }
 
 .form-ttl {
@@ -770,6 +775,12 @@ button.form-button {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
+  transition: background-color 250ms 
+              cubic-bezier(0.4, 0, 0.2, 1), 
+              border 250ms 
+              cubic-bezier(0.4, 0, 0.2, 1), 
+              fill 250ms 
+              cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*   svg class   */
 .modal-check-mar {
