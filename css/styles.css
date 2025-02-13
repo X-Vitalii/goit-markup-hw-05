@@ -633,10 +633,18 @@ button.form-button {
   background-color: #404bbf;
   border: none;
 }
+/*
+.btn-close:hover + .icon-close,
+.btn-close:focus + .icon-close {
+  fill: #ffffff;
+  background-color: #404bbf;
+}
+*/  
 
 .icon-close:hover,
 .icon-close:focus {
   fill: #ffffff;
+  background-color: transparent;
 }
 
 .form-ttl {
