@@ -530,8 +530,8 @@ img {
   border-radius: 4px;
   min-width: 165px;
   height: 40px;
-  padding: 8px 24px;
-  /*gap: 24px;*/
+  padding: 8px 0;
+  gap: 24px;
   background-color: #4d5ae5;
   color: #ffffff;
   font-family: "Roboto", sans-serif;
@@ -547,7 +547,6 @@ img {
 
 .icon-send {
   fill: #F4F4FD;
-  margin-left: 16px;
 }
 
 .backdrop {
